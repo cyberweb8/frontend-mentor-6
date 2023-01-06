@@ -9,9 +9,160 @@
 
   --fs-base: 0.9375rem;
 
-  --ff-p: 'Big Shoulders Display', cursive;
-  --ff-h1: 'Lexend Deca', sans-serif;
+  --ff-h1: 'Big Shoulders Display', cursive;
+  --ff-p: 'Lexend Deca', sans-serif;
 
   --fw-normal: 400;
   --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--clr-neutral-2);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plans {
+  margin: 1.5em;
+
+  max-width: 300px;
+  /* min-width: 290px; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.card:first-child {
+  background-color: var(--clr-primary-1);
+  padding: 1.5em;
+}
+
+.card:nth-child(2) {
+  background-color: var(--clr-primary-2);
+  padding: 1rem;
+}
+
+.card:last-child {
+  background-color: var(--clr-primary-3);
+  padding: 1.5em;
+}
+
+h2 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-family: var(--ff-h1);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-2);
+}
+
+p {
+  font-size: 0.8em;
+  font-family: var(--ff-p);
+  font-weight: var(--fw-normal);
+  color: var(--clr-neutral-1);
+}
+
+button {
+  width: 60%;
+  background-color: var(--clr-neutral-2);
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.4em 1.6em;
+  cursor: pointer;
+}
+
+.card:first-child button {
+  color: var(--clr-primary-1);
+}
+
+.card:nth-child(2) button {
+  color: var(--clr-primary-2);
+}
+
+.card:last-child button {
+  color: var(--clr-primary-3);
+}
+
+.card__icon {
+  height: 1.875em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card:first-child .card__icon {
+  background-image: url('./images/icon-sedans.svg');
+}
+
+.card:nth-child(2) .card__icon {
+  background-image: url('./images/icon-suvs.svg');
+}
+
+.card:last-child .card__icon {
+  background-image: url('./images/icon-luxury.svg');
+}
+
+@media (min-width: 52em) {
+  .plans {
+    flex-direction: row;
+  }
+
+  .plans {
+    margin: 1.5em;
+
+    max-width: 900px;
+  }
+  .card {
+    max-width: 320px;
+  }
 }
