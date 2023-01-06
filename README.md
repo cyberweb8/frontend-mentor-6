@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- The project in my github: [frontend-mentor-5](https://github.com/cyberweb8/frontend-mentor-6)
+- The project in my github: [frontend-mentor-6](https://github.com/cyberweb8/frontend-mentor-6)
 - Live Site URL: [Live Site to enjoy](https://cyberweb8.github.io/frontend-mentor-6/)
 
 ## My process
